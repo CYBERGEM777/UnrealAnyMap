@@ -84,25 +84,25 @@ FString Dialog2;
 //
 // If a reference of the wrong type is passed to Get() it returns false
 // and the out variable is not populated with any value.
-bool bGotAll =	AnyMap.Get("name", Name);
-bGotAll &=		AnyMap.Get("alignment", Alignment);
-bGotAll &=		AnyMap.Get("level", Level);
-bGotAll &=		AnyMap.Get("health", Health);
-bGotAll &=		AnyMap.Get("position", Position);
+bool bGotAll = AnyMap.Get("name", Name);
+bGotAll &=     AnyMap.Get("alignment", Alignment);
+bGotAll &=     AnyMap.Get("level", Level);
+bGotAll &=     AnyMap.Get("health", Health);
+bGotAll &=     AnyMap.Get("position", Position);
 
-bGotAll &=		AnyMap.Get(FIntPoint(0, 0), InventorySlot0);
-bGotAll &=		AnyMap.Get(FIntPoint(1, 0), InventorySlot1);
-bGotAll &=		AnyMap.Get(FIntPoint(0, 1), InventorySlot2);
+bGotAll &=     AnyMap.Get(FIntPoint(0, 0), InventorySlot0);
+bGotAll &=     AnyMap.Get(FIntPoint(1, 0), InventorySlot1);
+bGotAll &=     AnyMap.Get(FIntPoint(0, 1), InventorySlot2);
 
-bGotAll &=		AnyMap.Get(0, Dialog0);
-bGotAll &=		AnyMap.Get(1, Dialog1);
-bGotAll &=		AnyMap.Get(2, Dialog2);
+bGotAll &=     AnyMap.Get(0, Dialog0);
+bGotAll &=     AnyMap.Get(1, Dialog1);
+bGotAll &=     AnyMap.Get(2, Dialog2);
 
 // Returns false because key "foo" is not in map.
-bool bError0 =	AnyMap.Get("foo", Level);
+bool bError0 = AnyMap.Get("foo", Level);
 
 // Returns false because Level type does not match type of value with key "position"
-bool bError1 =	AnyMap.Get("position", Level);
+bool bError1 = AnyMap.Get("position", Level);
 
 // Get pointers to the map values and modify them.
 //
