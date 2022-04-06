@@ -1,12 +1,12 @@
 # UnrealAnyMap
-UnrealAnyMap is a tiny header-only C++ library that provides a heterogeneous map class that lets you map keys of any type to values of any type. One key type can map to values of any number of arbitrary types, in a typesafe manner.
+UnrealAnyMap is a map class that can use multiple key types simultaneously, and keys can map to values of any type.
 
 ```cpp
+FUnrealAnyMap AnyMap;
+
 AnyMap.Add("map", 1);
 AnyMap.Add("any", FName(TEXT("type")));
 AnyMap.Add(2, "to");
-AnyMap.Add(3, FVector(1, 1, 1));
-AnyMap.Add(FIntPoint(0, 0), FLinearColor::Blue);
 AnyMap.Add(FIntPoint(1, 0), FString(TEXT("any type!")));
 ```
 
